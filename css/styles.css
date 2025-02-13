@@ -1,0 +1,319 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+}
+
+.header {
+  padding: 2rem 4rem;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+}
+
+.headerTitle {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.header-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-icon {
+  width: 3rem;
+  height: 0.3rem;
+  background: white;
+  position: relative;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: "";
+  width: 3rem;
+  height: 0.3rem;
+  background: white;
+  position: absolute;
+  left: 0;
+}
+
+.hamburger-icon::before {
+  top: -0.8rem;
+}
+
+.hamburger-icon::after {
+  top: 0.8rem;
+}
+
+.mainNavigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.mainNavigation.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.close-button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.mainNavigationList {
+  list-style: none;
+  text-align: center;
+}
+
+.mainNavigationListItem {
+  color: white;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.bigFigure {
+  width: 100%;
+  height: 110vh;
+}
+
+.bigFigure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collections {
+  padding: 4rem;
+}
+
+.collectionsTitle {
+  font-size: 0.2rem;
+  color: black;
+  margin-bottom: 4rem;
+}
+
+.collectionsList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.collectionsListItem {
+  width: 30rem;
+  height: 40rem;
+}
+
+.collectionsListItem > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  background: white;
+  padding: 4rem;
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.block {
+  width: 40rem;
+  flex: 1;
+  min-width: 30rem;
+}
+
+section form {
+  width: 50rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  font-size: 1.6rem;
+  gap: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(1, 1, 1, 0.1);
+  margin-left: auto;
+}
+
+#cta-button {
+  background: #000000;
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  transition:  0.3s ease;
+  border-radius: 0.3125rem;
+}
+
+#cta-button:hover {
+  background: #ffffff;
+  box-shadow: #ccc 0 0.25rem 0.625rem;
+  color: rgb(0, 0, 0);
+  transition: 0.2s ease;
+}
+
+.submit{
+  background: #000000;
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit:hover {
+  background: #ffffff;
+  box-shadow: #ccc 0 0.25rem 0.625rem;
+  color: rgb(0, 0, 0);
+  transition: 0.2s ease;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: bold;
+  color: black;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.3125rem;
+  transition: border 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border: 0.0625rem solid #0457b1;
+  outline: none;
+}
+
+textarea {
+  height: 10rem;
+  resize: vertical;
+}
+
+.footer {
+  padding: 2rem 4rem;
+  background: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 2rem;
+  }
+
+  .headerTitle {
+    font-size: 2rem;
+  }
+
+  .header-button {
+    display: block;
+  }
+
+  .mainNavigation {
+    padding: 2rem;
+  }
+
+  .mainNavigationList {
+    padding: 2rem;
+  }
+
+  .mainNavigationListItem {
+    margin: 1rem 0;
+  }
+
+  .bigFigure {
+    height: 80vh;
+  }
+
+  .collections {
+    padding: 2rem;
+  }
+
+  .collectionsTitle {
+    font-size: 1.6rem;
+  }
+
+  .collectionsListItem {
+    width: 20rem;
+    height: 30rem;
+  }
+
+  .info {
+    padding: 2rem;
+  }
+
+  .block {
+    width: 100%;
+  }
+
+  section form {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+ 
+  .header-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
